@@ -15,4 +15,8 @@ export class ListaTarefasComponent {
     this.cards.push(card as Card)
   }
 
+  removeCard(indice: number) {
+    this.cards.splice(indice as number, 1);
+  }
+
 }

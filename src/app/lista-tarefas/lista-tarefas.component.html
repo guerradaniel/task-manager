@@ -2,18 +2,16 @@
 <div class="container py-4 bg-white rounded">
   <div class="row d-flex">
     <div class="col-md-12">
-      <app-novo-card
-        [estilo]="'btn btn-success pull-right mb-3'"
-        [texto]="'Adicionar tarefa'"
-        (novoCartaoEvent)="adicionarNovaTarefa($event)"
-      ></app-novo-card>
+      <app-novo-card [estilo]="'btn btn-success pull-right mb-3'" [texto]="'Adicionar tarefa'"
+        (novoCartaoEvent)="adicionarNovaTarefa($event)"></app-novo-card>
       <!-- verificar condição de texto adicionar tarefa -->
     </div>
   </div>
 
   <div class="row d-flex justify-content-center">
-    <div class="col-md-4 mb-3 mb-sm-0">
-      <!-- component dos cards -->
+    <div *ngFor="let card of cards; let i = index" class="col-md-4 mb-3 mb-sm-0">
+      <app-card [card]="card" [index]="i" (notificaCardExcluidoEvent)="removeCard($event)">
+      </app-card>
     </div>
   </div>
 </div>

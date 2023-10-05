@@ -8,13 +8,15 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { ListaTarefasComponent } from './lista-tarefas/lista-tarefas.component';
 import { CardComponent } from './card/card.component';
 import { NovoCardComponent } from './card/novo-card/novo-card.component';
+import { EditaCardComponent } from './card/edita-card/edita-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaTarefasComponent,
     CardComponent,
-    NovoCardComponent
+    NovoCardComponent,
+    EditaCardComponent
   ],
   imports: [
     BrowserModule,
