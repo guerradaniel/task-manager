@@ -1,9 +1,13 @@
-<h1 class="text-center text-white my-4">{{titulo}}</h1>
+<h1 class="text-center text-white my-4">Task Manager</h1>
 <div class="container py-4 bg-white rounded">
   <div class="row d-flex">
     <div class="col-md-12">
-      <!-- component de novo botão -->
-      <button class="btn btn-success pull-right mb-3" (click)="adicionarNovaTarefa()">Nova Tarefa</button>
+      <app-novo-card
+        [estilo]="'btn btn-success pull-right mb-3'"
+        [texto]="'Adicionar tarefa'"
+        (novoCartaoEvent)="adicionarNovaTarefa($event)"
+      ></app-novo-card>
+      <!-- verificar condição de texto adicionar tarefa -->
     </div>
   </div>
 

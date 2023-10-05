@@ -7,12 +7,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ListaTarefasComponent } from './lista-tarefas/lista-tarefas.component';
 import { CardComponent } from './card/card.component';
+import { NovoCardComponent } from './card/novo-card/novo-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaTarefasComponent,
-    CardComponent
+    CardComponent,
+    NovoCardComponent
   ],
   imports: [
     BrowserModule,

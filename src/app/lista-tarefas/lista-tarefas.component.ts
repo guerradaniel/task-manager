@@ -1,22 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import Card from '../card/card.model';
 
 @Component({
   selector: 'app-lista-tarefas',
   templateUrl: './lista-tarefas.component.html',
   styleUrls: ['./lista-tarefas.component.css']
 })
-export class ListaTarefasComponent implements OnInit {
+export class ListaTarefasComponent {
 
-  public titulo = 'Task Manager';
-  public novaTarefa = false;
+  @Input() titulo: string = '';
+  @Input() cards: Card[] = []
 
-  adicionarNovaTarefa() {
-    this.novaTarefa = true;
-  }
-
-  constructor() { }
-
-  ngOnInit(): void {
+  adicionarNovaTarefa(card: Card) {
+    this.cards.push(card as Card)
   }
 
 }
