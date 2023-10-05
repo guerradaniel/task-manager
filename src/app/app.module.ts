@@ -9,6 +9,7 @@ import { ListaTarefasComponent } from './lista-tarefas/lista-tarefas.component';
 import { CardComponent } from './card/card.component';
 import { NovoCardComponent } from './card/novo-card/novo-card.component';
 import { EditaCardComponent } from './card/edita-card/edita-card.component';
+import { ExcluiCardComponent } from './card/exclui-card/exclui-card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EditaCardComponent } from './card/edita-card/edita-card.component';
     ListaTarefasComponent,
     CardComponent,
     NovoCardComponent,
-    EditaCardComponent
+    EditaCardComponent,
+    ExcluiCardComponent
   ],
   imports: [
     BrowserModule,

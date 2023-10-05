@@ -8,6 +8,7 @@
     <app-edita-card [card]="card" [icone]="'fa fa-pencil'" [texto]="'Editar'"
       [estilo]="'btn btn-sm btn-outline-primary'" (atualizaCardEvent)="atualizaCard($event)"></app-edita-card>
 
-    <button class="btn btn-sm btn-danger mx-2">Excluir</button>
+    <app-exclui-card [texto]="'Remover'" [estilo]="'btn btn-sm btn-danger mx-2'" [icone]="'fa fa-trash'"
+      [nomeCard]="card.nome" [index]="index" (removeCardEvent)="removeCard($event)"></app-exclui-card>
   </div>
 </div>

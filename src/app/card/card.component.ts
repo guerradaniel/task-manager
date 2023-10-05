@@ -16,7 +16,7 @@ export class CardComponent {
     this.card = card
   }
 
-  removeCard(index: number) {
+  removeCard(index: any) {
     this.notificaCardExcluidoEvent.emit(index as number)
   }
 
