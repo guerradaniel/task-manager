@@ -15,6 +15,7 @@ export class EditaCardComponent implements OnInit {
   @Input() icone = '';
   @Input() estilo: string = ''
   @Input() texto: string = ''
+  @Input() desabilitaBotao: boolean = false;
 
   modalRef?: BsModalRef<any>;
   formulario: FormGroup = new FormGroup({});
