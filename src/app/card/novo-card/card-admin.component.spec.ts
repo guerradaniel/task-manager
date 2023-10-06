@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NovoCardComponent } from './novo-card.component';
+import { NovoCardComponent } from './card-admin.component';
 
 describe('NovoCardComponent', () => {
   let component: NovoCardComponent;
@@ -8,9 +8,9 @@ describe('NovoCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NovoCardComponent ]
+      declarations: [NovoCardComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(NovoCardComponent);
     component = fixture.componentInstance;

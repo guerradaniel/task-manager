@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import Card from '../card/card.model';
 
 @Component({
@@ -9,10 +9,10 @@ import Card from '../card/card.model';
 export class ListaTarefasComponent {
 
   @Input() titulo: string = '';
-  @Input() cards: Card[] = []
+  @Input() cards: Card[] = [];
 
   adicionarNovaTarefa(card: Card) {
-    this.cards.push(card as Card)
+    this.cards.push(card as Card);
   }
 
   removeCard(indice: number) {

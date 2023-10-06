@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
 import Card from './card.model';
 
 @Component({
@@ -24,7 +25,6 @@ export class CardComponent {
   updateCheckList() {
     this.card.concluido = (!this.card.concluido);
     this.updateChecklistEvent.emit(this.card.concluido);
-    console.log('this.card.concluido', this.card.concluido);
   }
 
 

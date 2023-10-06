@@ -1,17 +1,22 @@
 import { Component, EventEmitter, Input, OnInit, Output, TemplateRef } from '@angular/core';
-import Card from '../card.model';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import Card from '../card.model';
+
 @Component({
-  selector: 'app-novo-card',
-  templateUrl: './novo-card.component.html',
-  styleUrls: ['./novo-card.component.css']
+  selector: 'app-card-admin',
+  templateUrl: './card-admin.component.html',
+  styleUrls: ['./card-admin.component.css']
 })
-export class NovoCardComponent implements OnInit {
+export class CardAdminComponent implements OnInit {
 
   @Input() estilo: string = '';
   @Input() texto: string = '';
+  @Input() card: Card = new Card();
+  @Input() icone = '';
+  @Input() desabilitaBotao: boolean = false;
+  @Output() atualizaCardEvent = new EventEmitter<Card>();
   @Output() novoCartaoEvent = new EventEmitter<Card>();
 
   modalRef?: BsModalRef;
@@ -27,10 +32,10 @@ export class NovoCardComponent implements OnInit {
       nome: [null, Validators.required],
       descricao: [null, Validators.required],
       concluido: [null]
-    })
+    });
   }
 
-  abrirModal(template: TemplateRef<any>) {
+  abrirModalNovo(template: TemplateRef<Card>) {
     this.formulario.reset();
     this.modalRef = this.modalService.show(template);
   }
@@ -38,7 +43,17 @@ export class NovoCardComponent implements OnInit {
   salvar() {
     this.modalRef?.hide();
     const card = this.formulario.getRawValue() as Card;
-    this.novoCartaoEvent.emit(card)
+    this.novoCartaoEvent.emit(card);
   }
 
+  atualizaCard() {
+    this.modalRef?.hide();
+    const card = this.formulario?.getRawValue() as Card;
+    this.atualizaCardEvent.emit(card);
+  }
+
+  abrirModalEdicao(template: TemplateRef<Card>) {
+    this.formulario?.patchValue(this.card);
+    this.modalRef = this.modalService.show(template);
+  }
 }

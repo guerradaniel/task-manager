@@ -1,20 +1,20 @@
-<h1 class="text-center text-white my-4">Task Manager</h1>
+<h1 class="text-center text-white my-4 font-monospace">Task Manager</h1>
 <div class="container py-4 bg-white rounded">
   <div class="row d-flex">
     <div class="col-md-12">
-      <app-novo-card [estilo]="'btn btn-success pull-right mb-3'" [texto]="'Adicionar tarefa'"
-        (novoCartaoEvent)="adicionarNovaTarefa($event)"></app-novo-card>
-      <!-- verificar condição de texto adicionar tarefa -->
+      <app-card-admin [estilo]="'btn btn-success pull-right mb-3'" [texto]="'Adicionar'"
+        (novoCartaoEvent)="adicionarNovaTarefa($event)"></app-card-admin>
     </div>
   </div>
 
-  <div class="row d-flex justify-content-center">
-
+  <div *ngIf="cards.length > 0; else lista_vazia" class="row d-flex justify-content-center">
     <div *ngFor="let card of cards; let i = index" class="col-md-4 mb-3 mb-sm-0">
       <app-card [card]="card" [index]="i" (notificaCardExcluidoEvent)="removeCard($event)">
       </app-card>
     </div>
-
   </div>
 
+  <ng-template #lista_vazia>
+    <p class="text-center font-monospace mt-4 mb-4">Não há tarefas no momento! Por favor, clique no botão Adicionar.</p>
+  </ng-template>
 </div>

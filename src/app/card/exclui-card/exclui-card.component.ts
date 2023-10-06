@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, Output, TemplateRef } from '@angular/core';
+
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import Card from '../card.model';
 
 @Component({
   selector: 'app-exclui-card',
@@ -21,8 +23,8 @@ export class ExcluiCardComponent {
     private modalService: BsModalService
   ) { }
 
-  abrirModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template)
+  abrirModal(template: TemplateRef<Card>) {
+    this.modalRef = this.modalService.show(template);
   }
 
   confirmar() {
