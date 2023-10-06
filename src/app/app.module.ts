@@ -8,7 +8,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { ListaTarefasComponent } from './lista-tarefas/lista-tarefas.component';
 import { CardComponent } from './card/card.component';
 import { ExcluiCardComponent } from './card/exclui-card/exclui-card.component';
-import { CardAdminComponent } from './card/novo-card/card-admin.component';
+import { CardAdminComponent } from './card/card-admin/card-admin.component';
 
 @NgModule({
   declarations: [
