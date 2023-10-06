@@ -8,16 +8,16 @@ Para instalar o projeto, basta clonar o repositório na máquina (git clone http
 
 ## Development server
 
-Para rodar o projeto, basta rodar o comando `ng serve` para o server de desenvolvimento. Navegue no endereço `http://localhost:4200/` no navegador para executar o projeto. 
+Para rodar o projeto, basta rodar o comando `ng serve` para executar o server de desenvolvimento. Navegue no endereço `http://localhost:4200/` no navegador para executar o projeto. 
 
 ## Build
 
 Execute `ng build` para bildar o projeto. Os artfacts do build serão armazenados no diretório `dist/`.
 
-## Running unit tests
+## Rodando testes unitários
 
 Execute o comando `ng test` para rodar os testes unitários via [Karma](https://karma-runner.github.io).
 
-## Further help
+## Mais ajuda
 
 Para obter mais ajuda sobre o Angular CLI, use `ng help` ou confira a página [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
