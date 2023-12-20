@@ -1,6 +1,6 @@
 # TaskManager
 
-Este é um projeto feito com [Angular CLI](https://github.com/angular/angular-cli) na versão 14.1.1. O projeto é uma lista de tarefas (To-do list) que cria, lista, edita e remove as tarefas. O projeto faz parte do processo seletivo para a vaga de Desenvolvedor Angular no Santander.  
+Este é um projeto feito com [Angular CLI](https://github.com/angular/angular-cli) na versão 14.1.1. O projeto é uma lista de tarefas (To-do list) que cria, lista, edita e remove as tarefas.
 
 ## Instalação do Projeto
 
